@@ -1,5 +1,8 @@
 {
   "devDependencies": {
+    "@types/node": "^18.15.11",
+    "nodemon": "^2.0.22",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
   "name": "portfolio-backend",
@@ -12,5 +15,10 @@
   },
   "repository": "git@github.com:marcoshenriquemaia/portfolio-backend.git",
   "author": "Marcos Maia <henriquemarcosmaia@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "redis": "^4.6.5",
+    "redis-om": "^0.3.6"
+  }
 }

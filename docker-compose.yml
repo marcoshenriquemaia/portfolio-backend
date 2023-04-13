@@ -12,7 +12,7 @@ services:
     image: postgres
     environment:
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: example
+      POSTGRES_PASSWORD: postgres
       POSTGRES_DB: mydatabase
     volumes:
       - db-data:/var/lib/postgresql/data
@@ -29,10 +29,13 @@ services:
       - postgres
       - redis
     environment:
-      DATABASE_URL: postgresql://postgres:example@postgres:5432/mydatabase
-      REDIS_URL: redis://redis:6379
+      DATABASE_URL: postgresql://postgres:postgres@postgres:5432/mydatabase
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
     networks:
       - app-network
+    volumes:
+      - .:/app
 
 networks:
   app-network:
